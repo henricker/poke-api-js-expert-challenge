@@ -1,6 +1,6 @@
 const { teamController } = require("../factory/team-factory");
 
 const teamRoutes = {
-    '/team:get': teamController.getTeam
+    '/team:get': teamController.getTeam.bind(teamController),
 }
 module.exports = teamRoutes
