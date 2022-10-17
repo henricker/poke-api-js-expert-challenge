@@ -7,8 +7,8 @@
     "start": "node src/",
     "dev": "npx nodemon src/",
     "test:unit": "npx mocha -w __tests__/unit/**/*.test.js",
-    "test:e2e": "npx mocha -w __tests__/e2e/**/*.test.js",
-    "test:cov": "npx nyc mocha --parallel __tests__/**/*.test.js"
+    "test:e2e": "npx mocha -w --timeout 20000 __tests__/e2e/**/*.test.js",
+    "test:cov": "npx nyc mocha --timeout 20000 --parallel __tests__/**/*.test.js"
   },
   "keywords": [],
   "author": "",
