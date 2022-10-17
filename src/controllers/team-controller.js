@@ -6,8 +6,8 @@ class TeamController {
     
     async getTeam(request, response) {
         try {
-            await this.teamService.getTeam()
-            return response.end('hahahah')
+            const randomTeam = await this.teamService.getTeam()
+            return response.end(JSON.stringify(randomTeam))
         } catch(err) {
             response
                 .writeHead(500)
