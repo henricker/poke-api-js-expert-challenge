@@ -14,9 +14,7 @@ class TeamRepository {
                     const body = Buffer.concat(chunks);
                     resolve(body.toString());
                 })
-                response.on('error', (err) => {
-                    reject(err);
-                })
+                response.on('error', reject)
             })
        })
     }
