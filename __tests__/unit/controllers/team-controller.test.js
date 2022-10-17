@@ -24,7 +24,7 @@ describe('TeamController', () => {
             expect(stub.callCount).to.be.equal(1)
         });
 
-        it('Should set status code to 500 and add message error', async () => {
+        it('Should set status code to 500 and add message error if teamService throws', async () => {
             sandBox.stub(
                 teamService,
                 'getTeam'
