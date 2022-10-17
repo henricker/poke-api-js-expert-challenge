@@ -29,8 +29,8 @@ class TeamRepository {
 
     async getPokemon(url) {
         const response = await this.createRequest(url)
-        const result = JSON.parse(response).results
-
+        const result = JSON.parse(response)
+    
         const pokemon = {
             name: result.name,
             moves: result.moves.map(move => move.move.name),

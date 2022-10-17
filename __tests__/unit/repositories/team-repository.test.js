@@ -46,14 +46,10 @@ describe('TeamRepository', () => {
 
     describe('getPokemon', () => {
         it('Should return a pokemon', async () => {
-            const response = {
-                results: pokemon1Mock
-            }
-
             sandBox.stub(
                 teamRepository,
                 'createRequest',
-            ).resolves(JSON.stringify(response))
+            ).resolves(JSON.stringify(pokemon1Mock))
 
             const result = await teamRepository.getPokemon('https://pokeapi.co/api/v2/pokemon/1')
             expect(result).to.has.property('name', pokemon1MockExpect.name)

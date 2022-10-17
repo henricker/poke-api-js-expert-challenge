@@ -48,9 +48,9 @@ describe('TeamService', () => {
             sandbox.stub(teamRepository, 'listPokemons').resolves(arrayWithPokemons)
  
             sandbox.stub(teamRepository, 'createRequest')
-                .withArgs('https://pokeapi.co/api/v2/pokemon/1').resolves(JSON.stringify({ results: pokemon1Request }))
-                .withArgs('https://pokeapi.co/api/v2/pokemon/2').resolves(JSON.stringify({ results: pokemon2Request }))
-                .withArgs('https://pokeapi.co/api/v2/pokemon/3').resolves(JSON.stringify({ results: pokemon3Request }))
+                .withArgs('https://pokeapi.co/api/v2/pokemon/1').resolves(JSON.stringify(pokemon1Request))
+                .withArgs('https://pokeapi.co/api/v2/pokemon/2').resolves(JSON.stringify(pokemon2Request))
+                .withArgs('https://pokeapi.co/api/v2/pokemon/3').resolves(JSON.stringify(pokemon3Request))
                 
             sandbox.stub(teamService, 'getMultipleElementsFromArray').returns(arrayWithPokemons)
 
