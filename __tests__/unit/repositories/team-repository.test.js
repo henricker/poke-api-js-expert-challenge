@@ -56,7 +56,8 @@ describe('TeamRepository', () => {
             ).resolves(JSON.stringify(response))
 
             const result = await teamRepository.getPokemon('https://pokeapi.co/api/v2/pokemon/1')
-            expect(result).to.be.deep.equal(pokemon1MockExpect)
+            expect(result).to.has.property('name', pokemon1MockExpect.name)
+            expect(result).to.has.property('moves')
         })
     })
 })

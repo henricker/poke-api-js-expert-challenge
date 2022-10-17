@@ -1,7 +1,7 @@
 [
     {
         "name": "bulbasaur",
-        "url": "https://pokeapi.co/api/v2/pokemon/1/"
+        "url": "https://pokeapi.co/api/v2/pokemon/1"
     },
     {
         "name": "ivysaur",
@@ -9,6 +9,6 @@
     },
     {
         "name": "venusaur",
-        "url": "https://pokeapi.co/api/v2/pokemon/3/"
+        "url": "https://pokeapi.co/api/v2/pokemon/3"
     }
 ]
