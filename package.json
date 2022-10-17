@@ -1,0 +1,23 @@
+{
+  "name": "@henricker/poke-api",
+  "version": "1.0.0",
+  "description": "An API to get a random pokemon starter team",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/",
+    "dev": "npx nodemon src/",
+    "test": "npx mocha -w --timeout 20000 __tests__/**/*.test.js --verbose",
+    "test:cov": "npx nyc mocha --parallel __tests__/**/*.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.1.0",
+    "nodemon": "^2.0.20",
+    "nyc": "^15.1.0",
+    "sinon": "^14.0.1",
+    "supertest": "^6.3.0"
+  }
+}
