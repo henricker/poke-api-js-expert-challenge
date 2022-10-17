@@ -35,5 +35,31 @@ describe('TeamController', () => {
                 expect(responseMock.end.calledWith(JSON.stringify({ error: 'Erro interno do servidor'}))).to.be.ok
             })
         })
+
+        it('Should call response end with array having 3 pokemons with your moves', async () => {
+            const response = [
+                {
+                    name: 'bulbasaur',
+                    moves: ['razor-wind','swords-dance','cut']
+                },
+                {
+                    name: 'charmander',
+                    moves: ['scratch','ember','dragon-rage']
+                },
+                {
+                    name: 'squirtle',
+                    moves: ['tackle','tail-whip','bubble']
+                }
+            ]
+
+            sandBox.stub(
+                teamService,
+                'getTeam'
+            ).resolves(response)
+
+            teamController.getTeam(requestMock, responseMock).then(() => {
+                expect(responseMock.end.calledWith(JSON.stringify(response))).to.be.ok
+            })
+        })
     });
 })
