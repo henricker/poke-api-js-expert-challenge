@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/",
     "dev": "npx nodemon src/",
-    "test": "npx mocha -w --timeout 20000 __tests__/**/*.test.js --verbose",
+    "test:unit": "npx mocha -w __tests__/unit/**/*.test.js",
+    "test:e2e": "npx mocha -w __tests__/e2e/**/*.test.js",
     "test:cov": "npx nyc mocha --parallel __tests__/**/*.test.js"
   },
   "keywords": [],
